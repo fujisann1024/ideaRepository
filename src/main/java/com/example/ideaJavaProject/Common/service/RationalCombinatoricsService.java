@@ -9,6 +9,12 @@ import com.example.ideaJavaProject.Common.data.Rational;
  *
  * <p>注意：階乗や nCk 自体は整数だが、確率では比として分数が必要になるため、
  * 返り値を Rational に統一しておくと後段（確率計算）と接続しやすい。</p>
+ * 
+ * 
+ * <p>n個すべてを並べる並び方（全員の順番）は n! 通り。</p>
+ * <p>n個の中からk個を選んで並べる並び方は P(n,k) = n!/(n-k)! 通り。</p>
+ * <p>n個の中からk個を選ぶ方法は C(n,k) = n!/(k!(n-k)</p>
+ * 
  */
 public class RationalCombinatoricsService {
 	/** n! を返す（n>=0） */
