@@ -1,4 +1,4 @@
-package com.example.ideaJavaProject;
+package com.example.ideaJavaProject.LinearAlgebra;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -10,10 +10,8 @@ import com.example.ideaJavaProject.LinearAlgebra.data.ConstantVector;
 import com.example.ideaJavaProject.LinearAlgebra.data.Matrix;
 import com.example.ideaJavaProject.LinearAlgebra.service.GaussJordanService;
 
-/**
- * Hello world!
- */
-public class App {
+public class LinearAlgebra {
+
 	public static void main(String[] args) {
 		Matrix aRaw = Matrix.of(new BigDecimal[][] {
 				{ new BigDecimal("2"), new BigDecimal("3") },
@@ -34,8 +32,9 @@ public class App {
 
 		Matrix rref = GaussJordanService.rref(ab, mc, eps);
 		System.out.println("RREF:\n" + rref);
-		
+
 		Matrix x = GaussJordanService.solveUnique(ab, mc, eps);
-        System.out.println("Solution x:\n" + x);
+		System.out.println("Solution x:\n" + x);
 	}
+
 }
